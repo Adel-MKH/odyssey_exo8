@@ -24,9 +24,7 @@ public class Eagle extends Bird implements Fly {
         return "Screech!";
     }
     
-    /**
-     * take off, must be on ground
-     */
+
     @Override
     public void takeOff() {
         if (!this.flying && this.altitude == 0) {
@@ -35,11 +33,7 @@ public class Eagle extends Bird implements Fly {
         }
     }
 
-    /**
-     * fly up
-     * @param meters altitude increase
-     * @return altitude
-     */
+
     @Override
     public int ascend(int meters) {
         if (this.flying) {
@@ -49,11 +43,7 @@ public class Eagle extends Bird implements Fly {
         return this.altitude;
     }
 
-    /**
-     * fly down
-     * @param meters altitude decrease
-     * @return altitude
-     */
+
     @Override
     public int descend(int meters) {
         if (this.flying) {
@@ -63,9 +53,7 @@ public class Eagle extends Bird implements Fly {
         return this.altitude;
     }
 
-    /**
-     * land, altitude must be at 1 meter
-     */
+
     @Override
     public void land() {
         if (this.flying && this.altitude == 1) {
